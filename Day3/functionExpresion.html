@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = 10;
+        var add = function (a,b){
+            console.log("hello all")
+            return a + b;
+        }
+
+        console.log("variable  " + a);
+        console.log("functions  " + add);
+        console.log("function  " + add())
+
+        var b = add(2,3)
+        console.log("value of b " + b)
+        var findSquare = function(num){
+            return num*num;
+        }
+
+        var square = findSquare(4)
+        console.log(square);
+    </script>
+</body>
+</html>
