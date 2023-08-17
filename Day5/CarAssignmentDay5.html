@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <style>
+        .car {
+            /* display: block; */
+            align-items: center;
+            /* align-self: center; */
+            /* align-content: center; */
+        }
+        .btn{
+            /* display: flex; */
+            width: 200;
+            height: 50;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="https://mms.businesswire.com/media/20211102005487/en/833611/23/Telstra-International-Blue-Primary-RGB.jpg" 
+            alt="Logo" width="140" height="70" class="d-inline-block align-text-top">
+<!--  -->
+          </a>
+        </div>
+    </nav>
+
+    <div class = "car">
+        <h1>car<h1>
+        <img src="https://cdni.autocarindia.com/utils/imageresizer.ashx?n=https://cms.haymarketindia.net/model/uploads/modelimages/Hyundai-Grand-i10-Nios-200120231541.jpg" 
+            alt="" width="250" height="150">
+    </div>
+    <div class="btns">
+        <button class = "btn" id="btn_acc" onclick = "accelerate()" >Accelerate</button>
+        <button class = "btn" id="btn_gsp" onclick = "getspeed()">GetSpeed</button>
+        <button class = "btn" id="btn_brk" onclick = "brake()">Brake</button>
+    </div>
+    <div class = "speed" >
+        <h3> <span id ="speedDisplay" > 0</span> Km/hr</h3>
+    </div>
+    <script>
+        
+        // class Car{
+        //     constructor(speed){
+        //         this.speed = 0
+        //     }
+        //     caraccelerate(speed){
+        //         this.speed += 5
+        //     }
+        //     cargetspeed(speed){
+        //         let temp = `${this.speed} Km/hr `
+        //         document.getElementById("speedDisplay").innerText = temp
+        //     }
+        //     carbrake(speed){
+        //         if(speed>5){
+        //             this.speed -= 5
+        //         }
+        //     }
+
+        // }
+
+        let realSpeed = document.getElementById("speedDisplay").innerText
+        console.log(`initial speed is : ` , realSpeed)
+
+        function accelerate(){
+            realSpeed = Number(realSpeed)
+            realSpeed += 5;
+        }
+
+        function brake(){
+            realSpeed = Number(realSpeed)
+            if(realSpeed>=5){
+                realSpeed -= 5;
+            }
+        }
+
+        function getspeed(){
+            console.log(`Now speed is : ` , realSpeed);
+            document.getElementById("speedDisplay").innerText = realSpeed;
+        }
+    </script>
+</body>
+</html>

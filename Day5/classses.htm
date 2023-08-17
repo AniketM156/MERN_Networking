@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Account{
+            constructer(id,name,balance){
+                this.id = id
+                this.name = name;
+                this.balance = balance
+            }
+            
+            deposit(amount){
+                this.balance += amount;
+            }
+            withdraw(amount){
+                this.balance -= amount;
+            }
+            showdetails(){
+                console.log(`id - ${this.id} name - ${this.name} balance - ${this.balance} `);
+            }
+        }
+
+        let acc = new Account(1,"aniket",30000)
+        acc.showdetails()
+
+    </script>
+</body>
+</html>
