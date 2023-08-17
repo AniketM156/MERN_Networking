@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="aleertWindow()">alert</button>
+    <button onclick="promptwindow()">prompt</button>
+    <button onclick="confirmWindow()">confirm</button>
+    <button onclick="openWindow()">open</button>
+    <button onclick="closeWindow()">close</button>
+    <script>
+        function aleertWindow(){
+            
+        }
+
+        function promptwindow(){
+            let age = window.prompt("enter your age")
+            let name = window.prompt("enter yout name")
+            console.log(name + " " + age)
+        }
+
+        function confirmWindow(){
+
+        }
+       
+        function openWindow(){
+            window.open("https://www.google.com/","_blank","width = 100" , "height = 50")
+
+        }
+        function closeWindow(){
+            close()
+        }
+    </script>
+</body>
+</html>
